@@ -65,7 +65,7 @@
 			<br>
 			<br>
 			<br>
-		<h3><a href="logout.php">Logout</a></h3>
+		<h3><a href="slogout.php">Logout</a></h3>
 		</td>
 	</tr>
 </table>

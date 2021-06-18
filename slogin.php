@@ -1,54 +1,30 @@
+<!DOCTYPE html>
 <html>
-    <head>
-        <style>
-            body {
-                background-image: url('sbimage.jpg');
-                background-repeat: no-repeat;
-                background-attachment: fixd;
-                background-size: 100% 100%;
-            }
-            h1 {
-                text-align: center;
-                color: #1c1ca3;
-                font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-                font-size: 50px;
-            }
-            h4 {
-                text-align: center;
-                color:rgb(28, 61, 13);
-                font-style: italic;
-                font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-                font-size: 16px;
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-            }
-            input[type=submit] {
-                background-color: #2eb935;
-                color: white;
-            
-            }
-            input[type=email]:focus {
-                background-color: rgb(171, 177, 114);
-                box-sizing:inherit;
-            }
-            input[type=password]:focus {
-                background-color: rgb(171, 177, 114);
-                box-sizing:inherit;
-            }
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 
-        </style>
-        <title>seller login page</title>
-    </head>
-    <body>
-        <br><br><h1>Join Store(login)</h1>
-        <form action="slogin_acc.php" method='POST'>
+	<link rel="stylesheet" type="text/css" href="style.css">
 
-        <h4>Email:  <input type="email" name="email" id="email" placeholder="enter your email" required><h4>
-    
-        <h4>Password:  <input type="password" name="password" id="password" placeholder="enter your password" required><br></h4>
-
-        <h4><input type="submit" value="Login"></h4>
-
-        </form>
-
-    </body>
+	<title>GROCERY STORE-S_login</title>
+</head>
+<body>
+	<div class="container">
+		<form action="slogin_acc.php" method="POST" class="login-email">
+			<p class="login-text" style="font-size: 2rem; font-weight: 800;">Login</p>
+			<div class="input-group">
+				<input type="email" placeholder="Email" name="email" id="email" required>
+			</div>
+			<div class="input-group">
+				<input type="password" placeholder="Password" name="password" id="password" required>
+			</div>
+			<div class="input-group">
+				<button name="submit" class="btn">Login</button>
+			</div>
+			<p class="login-register-text">Don't have an account? <a href="sreg.php">Register Here</a>.</p>
+		</form>
+	</div>
+</body>
 </html>

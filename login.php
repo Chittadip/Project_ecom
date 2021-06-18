@@ -2,52 +2,84 @@
     <head>
         <style>
             body {
-                background-image: url('sbimage.jpg');
-                background-repeat: no-repeat;
-                background-attachment: fixd;
-                background-size: 100% 100%;
-            }
-            h1 {
-                text-align: center;
-                color: #1c1ca3;
-                font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-                font-size: 50px;
-            }
-            h4 {
-                text-align: center;
-                color:rgb(28, 61, 13);
-                font-style: italic;
-                font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-                font-size: 16px;
-
-            }
-            input[type=submit] {
-                background-color: #2eb935;
-                color: white;
-            
-            }
-            input[type=email]:focus {
-                background-color: rgb(171, 177, 114);
-                box-sizing:inherit;
-            }
-            input[type=password]:focus {
-                background-color: rgb(171, 177, 114);
-                box-sizing:inherit;
-            }
-
+                margin: 0;
+                padding: 0;
+                font-family: sans-serif;
+                background-image: url("f4.jpg");
+                background-size: cover;
+                opacity: 1.0;
+        }    
+        .box{
+            width: 400px;
+            padding: 40px;
+            border-radius: 30px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            background-color: rgba(0,0,0,0.8);
+            text-align:center;
+            box-shadow: 2px 2px 15px rgba(0,0,0,0.3);
+            color: #fff;
+        }
+        .box h1{
+            color: white;
+            text-transform: uppercase;
+            font-weight: 500;
+        }
+        .box input[type="email"], .box input[type="password"]{
+            border:0;
+            background: none;
+            display: block;
+            margin: 20px auto;
+            text-align: center;
+            border: 2px solid #3498db;
+            padding: 14px 10px;
+            width: 250px;
+            height:55px;
+            font-size:25px;
+            outline: none;
+            color: white;
+            border-radius: 24px;
+            transition: 0.25s;
+        }
+        .box input[type="email"]:focus, .box input[type="password"]:focus{
+            width: 280px;
+            border-color: #2ecc71;
+        }
+        .box input[type="submit"]{
+             border:0;
+            background: none;
+            display: block;
+            margin: 20px auto;
+            text-align: center;
+            border: 2px solid #2ecc71;
+            padding: 14px 40px;
+            outline: none;
+            color: white;
+            border-radius: 24px;
+            transition: 0.25s;
+            cursor: pointer;
+        }
+         .box input[type="submit"]:hover{
+            background: #2ecc71;
+         }
+         .login-register-text a {
+         text-decoration: none;
+          color: #6c5ce7;
+        }
         </style>
         <title>Customer Login</title>
     </head>
     <body>
-        <br><br><h1>Log into your account</h1>
-        <form action="loginacc.php" method='POST'>
+        <form class="box" action="loginacc.php" method='POST'>
+        <h1>LOGIN</h1>
 
-        <h4>Email:  <input type="email" name="email" id="email" placeholder="enter your email" required><h4>
+        <input type="email" name="email" id="email" placeholder="enter your email" required><br>
     
-        <h4>Password:  <input type="password" name="password" id="password" placeholder="enter your password" required><br></h4>
-
-        <h4><input type="submit" value="Login"></h4>
-
+        <input type="password" name="password" id="password" placeholder="enter your password" required><br>
+        <h4><input type="submit" value="Login"></h4><br>
+        <p class="login-register-text">Create new account?<a href="register.php">Register Here</a></p>
         </form>
 
     </body>
