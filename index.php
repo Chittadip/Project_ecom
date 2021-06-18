@@ -1,4 +1,4 @@
-<h1>Home Page</h1>
+<h2>Home Page</h2>
 
 <h1>FOR CUSTOMERS</h1>
 <a href="register.php">Register</a>&nbsp;||&nbsp;
