@@ -42,11 +42,12 @@
  		
  	</tr>
 <?php	
+		session_start();
 
 	$qr = 	"SELECT 
 				*
 			FROM 
-				`products`";
+				`products` WHERE Suppliers_ID='".$_SESSION['ID']."'";
 
 	$q1 = mysqli_query($dbcon,$qr);
     //if(mysqli_num_rows($q1) > 0)

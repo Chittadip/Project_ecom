@@ -50,6 +50,10 @@
 
     <?php include("config.php"); ?>
     <?php
+        session_start();
+        if (!isset($_SESSION['ID'])) {
+            header('location:slogin.php');
+        }
         if(isset($_POST["btn"])) {  
             $pro_name=$_REQUEST['name'];
             $pro_desc=$_REQUEST['description'];
@@ -57,13 +61,15 @@
             $pro_create=$_REQUEST['createdAt'];
             $pro_update=$_REQUEST['UpdatedAt'];
             $pro_sts=$_REQUEST['status'];
+            $sup_id=$_SESSION['ID'];
 
             // store n upload image
+            $image_name ="Upload/".$_FILES["image"]["name"];
             $temp_name=$_FILES["image"]["tmp_name"];
-            $image_name ="Upload/".$_FILES["image"]["name"]; 
+             
            
 
-            $sql="INSERT INTO `products`(`ID`,`Cat_ID`,`Name`,`Description`,`Price`,`Image`,`Suppliers_ID`,`CreatedAt`,`UpdatedAt`,`Status`) VALUES ('','','$pro_name','$pro_desc','$pro_price','$image_name','','$pro_create','$pro_update','$pro_sts')";
+            $sql="INSERT INTO `products`(`Cat_ID`,`Name`,`Description`,`Price`,`Image`,`Suppliers_ID`,`CreatedAt`,`UpdatedAt`,`Status`) VALUES ('1','$pro_name','$pro_desc','$pro_price','$image_name','$sup_id','$pro_create','$pro_update','$pro_sts')";
              move_uploaded_file($temp_name,$image_name);
             if(mysqli_query($dbcon,$sql)){
             echo "Record Inserted Succesfully";
