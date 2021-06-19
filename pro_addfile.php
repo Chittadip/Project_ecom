@@ -67,8 +67,7 @@
             $image_name ="Upload/".$_FILES["image"]["name"];
             $temp_name=$_FILES["image"]["tmp_name"];
              
-           
-
+ 
             $sql="INSERT INTO `products`(`Cat_ID`,`Name`,`Description`,`Price`,`Image`,`Suppliers_ID`,`CreatedAt`,`UpdatedAt`,`Status`) VALUES ('1','$pro_name','$pro_desc','$pro_price','$image_name','$sup_id','$pro_create','$pro_update','$pro_sts')";
              move_uploaded_file($temp_name,$image_name);
             if(mysqli_query($dbcon,$sql)){
