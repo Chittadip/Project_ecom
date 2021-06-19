@@ -60,7 +60,7 @@
 
             // store n upload image
             $temp_name=$_FILES["image"]["tmp_name"];
-            $image_name ="Upload/".$_FILES["image"]["name"]; 
+            $image_name ="img-upload/".$_FILES["image"]["name"]; 
            
 
             $sql="INSERT INTO `products`(`ID`,`Cat_ID`,`Name`,`Description`,`Price`,`Image`,`Suppliers_ID`,`CreatedAt`,`UpdatedAt`,`Status`) VALUES ('','','$pro_name','$pro_desc','$pro_price','$image_name','','$pro_create','$pro_update','$pro_sts')";
