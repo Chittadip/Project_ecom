@@ -34,7 +34,7 @@ include("config.php");
     session_start();
     $user=mysqli_fetch_array($q1);
     $_SESSION['ID']=$user['ID'];
-    header('location:sprofile.php');
+    header('location:pro_viewfile.php');
   }
   else{
     header('location:slogin.php? message=Email or Password Incorrect ');

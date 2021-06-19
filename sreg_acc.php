@@ -20,7 +20,7 @@ echo $squery;
 if(mysqli_query($dbcon,$squery)) {
     echo "registered succesfully";
     $msg="welcome to your home page";
-    header("location:index.php?msg={$msg}");
+    header("location:pro_addfile.php?msg={$msg}");
 }
 else {
     echo "can't register";
