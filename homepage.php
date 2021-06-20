@@ -1,5 +1,3 @@
-
-<form name="homepage.php" method="post" action="#">
 <html>
 <head>
 <style>
@@ -9,7 +7,6 @@ input[type=submit] {
             align-content: center;
 </style>
 </head>
-<body>
 <form action="homepage.php" method="post">
 	
 	<input type="text" name="valueToSearch" placeholder="Search">
@@ -38,6 +35,7 @@ input[type=submit] {
 		echo "No results to show";
    }
 ?>
+<form name="homepage.php" method="post" action="homepage.php">
 <table width="80%" border="0" cellspacing="2" cellpadding="5" align="center">
 <tr>
        <td align="center"><h3><a href="index.php">Home</a></h3></td>
