@@ -7,8 +7,9 @@
 <?php include("config.php"); ?>
 <?php
     #ID is need to be fetched from previos page(home page).For tseting purpose ID is set to static.
-    #session_strat();
-    $qry = "SELECT * FROM products WHERE ID=2 ";
+    //session_strat();
+    $qry = "SELECT * FROM products WHERE ID='".$_REQUEST['pid']."' ";
+    
 
     $qryr= mysqli_query($dbcon,$qry);
 

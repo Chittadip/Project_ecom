@@ -202,6 +202,7 @@ $result=mysqli_query($dbcon,$sql);
 </tr>
 
 <?php
+
 if (mysqli_num_rows($result)>0)
 	 {
 	 	while($row=mysqli_fetch_array($result))
@@ -219,6 +220,7 @@ if (mysqli_num_rows($result)>0)
 							</div>
 						</td>
 						<td><?php echo $row['Status']; ?></td> 
+						<td><a href="vproduct.php?pid=<?php echo $row['ID']; ?>">view product</a></td>
 <?php		}
 	 } 
 	 else
