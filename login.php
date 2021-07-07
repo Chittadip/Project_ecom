@@ -79,6 +79,7 @@
     
         <input type="password" name="password" id="password" placeholder="enter your password" required><br>
         <h4><input type="submit" value="Login"></h4><br>
+        <p><ul><a href="chngpass.php">Forgot Password?</a></ul></p><br>
         <p class="login-register-text">Create new account?<a href="register.php">Register Here</a></p>
         </form>
 
