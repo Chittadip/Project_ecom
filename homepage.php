@@ -74,20 +74,44 @@
 	{
 	 $item=strtolower($_POST['valueToSearch']);
 
-	 $sql = "SELECT `Name` FROM `products` WHERE `Name`='$item' ";
-	 $result = mysqli_query($dbcon,$sql);
+	 $sql="SELECT `products`.* FROM `products` WHERE `products`.`Name`='$item'";
+$result=mysqli_query($dbcon,$sql);
+?>
 
-	 if (mysqli_num_rows($result)>0)
+
+<table width="80%" border="1" cellspacing="2" cellpadding="5" align="center">
+<tr>
+ 		<td align="center" style="color:blue;"><strong><u>Name</strong></td>
+ 		<td align="center" style="color:blue;"><strong><u>Description</strong></td>
+ 		<td align="center" style="color:blue;"><strong><u>Price</strong></td>
+ 		<td align="center" style="color:blue;"><strong><u>Image</strong></td>
+ 		<td align="center" style="color:blue;"><strong><u>Status</strong></td>
+</tr>
+
+<?php
+if (mysqli_num_rows($result)>0)
 	 {
 	 	while($row=mysqli_fetch_array($result))
 		{
-			echo $row["Name"];
-		}
+?>			<tr>
+						<!--<td><?php //echo $r['ID']; ?></th> -->
+						<td><?php echo $row['Name']; ?></td>
+						<td><?php echo $row['Description']; ?></td> 
+						<td><?php echo $row['Price']; ?></td>
+						<td>
+							<div class="container main">
+								<div class="img-block">
+										<img class="img-responsive" src="<?php echo $row['Image'];?>" alt="Card Image Caption" width="50" height ="50" >
+								</div>
+							</div>
+						</td>
+						<td><?php echo $row['Status']; ?></td> 
+<?php		}
 	 } 
 	 else
-		echo "No results to show";
+		echo '<tr><td align="center" colspan="5" style="color:red;">No Record Found</td></tr>' ;
    }
-?>
+ ?> 
 <br><br>
 <form name="homepage.php" method="post" action="homepage.php">
 <table width=100%>
@@ -129,38 +153,79 @@ $result=mysqli_query($dbcon,$sql);
 
 <table width="80%" border="1" cellspacing="2" cellpadding="5" align="center">
 <tr>
- 		<td align="center"><strong>Name</strong></td>
- 		<td align="center"><strong>Description</strong></td>
- 		<td align="center"><strong>Price</strong></td>
- 		<td align="center"><strong>Image</strong></td>
- 		<td align="center"><strong>Status</strong></td>
+ 		<td align="center" style="color:blue;"><strong><u>Name</strong></td>
+ 		<td align="center" style="color:blue;"><strong><u>Description</strong></td>
+ 		<td align="center" style="color:blue;"><strong><u>Price</strong></td>
+ 		<td align="center" style="color:blue;"><strong><u>Image</strong></td>
+ 		<td align="center" style="color:blue;"><strong><u>Status</strong></td>
 </tr>
 
 <?php
-if(mysqli_num_rows($result)>0){
-     $row=mysqli_fetch_assoc($result);
-      ?>
-<tr>
-      <td><?php echo $row['Name'] ?></td>
-	  <td><?php echo $row['Description'] ?></td>
-	  <td><?php echo $row['Price'] ?></td>
-	  <td>
-	  <div class="container main">
-			<div class="img-block">
-				<img class="img-responsive" src="<?php echo $r['Image'];?>" alt="Card Image Caption" width="50" height ="50" >
-			</div>
-	  </div>
-	  </td>
-	  <td><?php echo $row['Status'] ?></td>
-</tr>
-
-<?php  } 
-           else{
- 	     echo '<tr><td align="center" colspan="5" style="color:red;">No Record Found</td></tr>' ; }
-}
-?>
-  
+if (mysqli_num_rows($result)>0)
+	 {
+	 	while($row=mysqli_fetch_array($result))
+		{
+?>			<tr>
+						<!--<td><?php //echo $r['ID']; ?></th> -->
+						<td><?php echo $row['Name']; ?></td>
+						<td><?php echo $row['Description']; ?></td> 
+						<td><?php echo $row['Price']; ?></td>
+						<td>
+							<div class="container main">
+								<div class="img-block">
+										<img class="img-responsive" src="<?php echo $row['Image'];?>" alt="Card Image Caption" width="50" height ="50" >
+								</div>
+							</div>
+						</td>
+						<td><?php echo $row['Status']; ?></td> 
+<?php		}
+	 } 
+	 else
+		echo '<tr><td align="center" colspan="5" style="color:red;">No Record Found</td></tr>' ;
+   }
+ ?> 
 </table>
 <br>
+<?php
+$sql="SELECT `products`.* FROM `products` WHERE `products`.`status`='Available'";
+$result=mysqli_query($dbcon,$sql);
+?>
+
+
+<table width="80%" border="1" cellspacing="2" cellpadding="5" align="center">
+<tr>
+ 		<td align="center" style="color:blue;"><strong><u>Name</strong></td>
+ 		<td align="center" style="color:blue;"><strong><u>Description</strong></td>
+ 		<td align="center" style="color:blue;"><strong><u>Price</strong></td>
+ 		<td align="center" style="color:blue;"><strong><u>Image</strong></td>
+ 		<td align="center" style="color:blue;"><strong><u>Status</strong></td>
+</tr>
+
+<?php
+
+if (mysqli_num_rows($result)>0)
+	 {
+	 	while($row=mysqli_fetch_array($result))
+		{
+?>			<tr>
+						<!--<td><?php //echo $r['ID']; ?></th> -->
+						<td><?php echo $row['Name']; ?></td>
+						<td><?php echo $row['Description']; ?></td> 
+						<td><?php echo $row['Price']; ?></td>
+						<td>
+							<div class="container main">
+								<div class="img-block">
+										<img class="img-responsive" src="<?php echo $row['Image'];?>" alt="Card Image Caption" width="50" height ="50" >
+								</div>
+							</div>
+						</td>
+						<td><?php echo $row['Status']; ?></td> 
+						<td><a href="vproduct.php?pid=<?php echo $row['ID']; ?>">view product</a></td>
+<?php		}
+	 } 
+	 else
+		echo '<tr><td align="center" colspan="5" style="color:red;">No Record Found</td></tr>' ;
+ ?> 
+</table>
 </body>
 </html>

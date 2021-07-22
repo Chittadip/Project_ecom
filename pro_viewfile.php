@@ -72,7 +72,7 @@
 						<td><?php echo $r['Status']; ?></td> 
 						<td><a href="pro_updtdfile.php?id=<?php echo $r['ID']; ?>">Edit</a></td>
     					<td><a href="pro_delfile.php?id=<?php echo $r['ID']; ?>">Delete</a></td>
- 					</tr>;
+ 					</tr>
  <?php
  				}
 
