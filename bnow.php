@@ -6,8 +6,12 @@
 <h3 > BUY </h3>
 <?php include("config.php"); ?>
 <?php
-#session_start();
-$uid=$_REQUEST['upid'];
+session_start();
+//$uid=$_REQUEST['upid'];
+//$uid= session_id();
+$uid= $_SESSION['ID'];
+
+echo $uid;
 $qc="SELECT * FROM carts WHERE userId='".$uid."'";
 $qcr=mysqli_query($dbcon,$qc);
     while($c = mysqli_fetch_array($qcr)) {

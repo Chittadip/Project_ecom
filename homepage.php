@@ -89,6 +89,8 @@ $result=mysqli_query($dbcon,$sql);
 </tr>
 
 <?php
+session_start();
+
 if (mysqli_num_rows($result)>0)
 	 {
 	 	while($row=mysqli_fetch_array($result))
@@ -202,7 +204,6 @@ $result=mysqli_query($dbcon,$sql);
 </tr>
 
 <?php
-
 if (mysqli_num_rows($result)>0)
 	 {
 	 	while($row=mysqli_fetch_array($result))

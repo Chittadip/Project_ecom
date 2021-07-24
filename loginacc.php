@@ -2,6 +2,7 @@
 include("config.php");
 ?>
 <?php
+	
 	$username=$_REQUEST['email'];
 	$password=$_REQUEST['password'];
 	$sql="SELECT `ID` FROM `customers` WHERE `Email_ID`='$username' AND `Password`='$password' ";
@@ -11,7 +12,8 @@ include("config.php");
 		session_start();
 		$user=mysqli_fetch_array($q1);
 		$_SESSION['ID']=$user['ID'];
-		header('location:profile.php');
+		header('location:homepage.php');
+		//header('location:profile.php');
 	}
 	else{
 		header('location:login.php? message=Email or Password Incorrect ');

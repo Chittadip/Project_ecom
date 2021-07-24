@@ -6,11 +6,13 @@
 <h3 > CART </h3>
 <?php include("config.php"); ?>
 <?php
-$uid=99;
+
 $prid=3;
 session_start();
 $id= $_REQUEST['id'];
+$uid= $_SESSION['ID'];
 
+//$uid= session_id();
 $qcart="INSERT INTO carts (userId, productId, quantity) VALUES ('".$uid."', '".$id."', '".$prid."')";
 if(mysqli_query($dbcon,$qcart)) {
     echo "Your product added to cart";
