@@ -23,7 +23,8 @@
 			<div class="input-group">
 				<button name="submit" class="btn">Login</button>
 			</div>
-			<p class="login-register-text">Don't have an account? <a href="sreg.php">Register Here</a>.</p>
+			<p class="login-register-text">Don't have an account? <a href="sreg.php">Register Here</a>.</p><br>
+			 <p class="login-register-text">Forgot Password?<ul><a href="schngpass.php">Change Password</a></ul></p><br>
 		</form>
 	</div>
 </body>
