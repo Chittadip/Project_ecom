@@ -1,3 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>CUSTOMER PROFILE</title>
+  <style>
+  	*{
+  		margin-bottom: 0;
+  		padding: 0;
+  		font-family: century gothic;
+  	}
+    body {
+        background-image:url("ww.jpg"); 
+        height:100vh;
+        background-size: cover;
+        background-position: center;
+		}
+		.main{
+			width: 400px;
+            padding: 50px;
+            border-radius: 30px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            background-color: rgba(0,0,0,0.8);
+            text-align:center;
+            box-shadow: 2px 2px 15px rgba(0,0,0,0.3);
+            color: #fff;
+		}
+	ul{
+		float: right;
+		list-style-type: none;
+		margin-top: 25px; 
+	}
+	ul li{
+		display: inline-block;
+	}
+	ul li a{
+		text-decoration: none;
+		color:#fff;
+		padding: 5px 20px;
+		border: 1px solid #fff; 
+		transition: 0.6s ease;
+	}
+	ul li a:hover{
+		background-color: #fff;
+		color: #000;
+	}
+	h1{
+		text-align: center;
+		display: block;
+
+	}
+</style>		
+</head>
+<body>
+	<header>
+		<div class="main">
 <?php include("config.php"); ?>
 <?php
 	
@@ -6,28 +64,8 @@
 		header('location:login.php');
 	}
 ?>
-<table width="80%" border="0" cellspacing="2" cellpadding="5" align="center">
-	<tr>
-		<td colspan="5" align="center">
-		<h3>Welcome to your profile!</h3>
-		</td>
-	</tr>
-	<tr>
-		<td colspan="5" align="center">
-		<h3><a href="index.php">Go to Home</a></h3>
-		<br>
-		<br>
-		<br>
-		<br>
-		</td>
-	</tr>
- </table>
- <table width="90%" border="1" cellspacing="2" cellpadding="5" align="center">
- 	<tr>
- 		<td align="center"><strong>Name</strong></td>
- 		<td align="center"><strong>Email ID</strong></td>
- 		<td align="center"><strong>Phone Number</strong></td>
- 	</tr>
+		<h1>Welcome to your profile!</h1>
+		
 <?php	
 	$qr = 	"SELECT 
 				*
@@ -40,32 +78,17 @@
     if(mysqli_num_rows($q1) > 0)
  			{
 				while($customer = mysqli_fetch_array($q1)) {
-		// print_r($customer);
-					echo  '<tr>
- 							<td align="center">'.$customer["Name"].'</td>
- 							<td align="center">'.$customer["Email_ID"].'</td>
- 							<td align="center">'.$customer["Phone_no"].'</td>
- 						</tr>';
+		
+					 echo $customer["Name"];
  				}
 			}
-
-
-
-	// echo 'Welcome to your profile '.$customer['name'];
-	// echo '<br>';
-
-	// echo 'Email: '.$user['email'];
-
 ?>
-</table>
-<table width="80%" align="center">
-	<tr>
-		<td colspan="5" align="center">
-			<br>
-			<br>
-			<br>
-			<br>
-		<h3><a href="logout.php">Logout</a></h3>
-		</td>
-	</tr>
-</table>
+		<ul>
+		<li><a href="categories1.php">Home</a></li>
+		<li><a href="chngpass1.php">Password Change</a></li>
+		<li><a href="logout.php">Logout</a></li>
+		</ul>
+	</div>
+</header>
+</body>
+</html>

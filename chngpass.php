@@ -93,11 +93,12 @@ include("config.php");
     $id=$_POST['email'];
     $pwd=$_POST['password'];
     
-    $query="UPDATE `customers` SET `Password`= '$pwd' WHERE `Email_ID`='$id' ";  
+    $query="UPDATE `suppliers` SET `Password`= '$pwd' WHERE `Email_ID`='$id' ";  
     $data=mysqli_query($dbcon,$query);
     if($data)
     {
-        echo "Password Change";
+        echo "Password Changed Successfully";
+        header('location:sprofile.php');
     }
     else{
         echo "Failed to change password";

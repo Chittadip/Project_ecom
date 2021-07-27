@@ -10,7 +10,8 @@
                 opacity: 1.0;
         }    
         .box{
-            width: 400px;
+            width: 500px;
+            height: 600px;
             padding: 40px;
             border-radius: 30px;
             position: absolute;
@@ -68,6 +69,11 @@
          text-decoration: none;
           color: #6c5ce7;
         }
+        a.btn:hover{
+    background-color: #fff;
+    color: #000;
+}
+
         </style>
         <title>Customer Login</title>
     </head>
@@ -75,12 +81,22 @@
         <form class="box" action="loginacc.php" method='POST'>
         <h1>LOGIN</h1>
 
-        <input type="email" name="email" id="email" placeholder="enter your email" required><br>
+        <input type="email" name="email" id="email" placeholder="Email ID" required><br>
     
-        <input type="password" name="password" id="password" placeholder="enter your password" required><br>
+        <input type="password" name="password" id="password" placeholder="Password" required><br>
         <h4><input type="submit" value="Login"></h4><br>
-        <p><ul><a href="chngpass.php">Forgot Password?</a></ul></p><br>
+        <p><a href="chngpass.php">Forgot Password?</a></p><br>
         <p class="login-register-text">Create new account?<a href="register.php">Register Here</a></p>
+        <a href="index2.html" class="btn" style="font-size: 24px;
+            text-decoration: none;
+            padding: 10px 20px;
+            border: 5px solid #fff;
+            transition: 0.6s ease;
+            position: absolute;
+            top:85%;
+            left: 70%;
+            float: right;
+">BACK</a>
         </form>
 
     </body>

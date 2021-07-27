@@ -25,6 +25,18 @@
 			</div>
 			<p class="login-register-text">Don't have an account? <a href="sreg.php">Register Here</a>.</p><br>
 			 <p class="login-register-text">Forgot Password?<ul><a href="schngpass.php">Change Password</a></ul></p><br>
+			 <a href="index2.html" class="btn" style="font-size: 18px;
+            text-decoration: none;
+            color: #6c5ce7;           
+            padding: 8px 15px;
+            border: 5px solid #6c5ce7;
+            border-radius: 30px;
+            transition: 0.6s ease;
+            position: absolute;
+            top:75%;
+            left: 48%;
+            float: right;
+">BACK</a>
 		</form>
 	</div>
 </body>

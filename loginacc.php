@@ -12,7 +12,7 @@ include("config.php");
 		session_start();
 		$user=mysqli_fetch_array($q1);
 		$_SESSION['ID']=$user['ID'];
-		header('location:homepage.php');
+		header('location:profile.php');
 		//header('location:profile.php');
 	}
 	else{

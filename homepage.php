@@ -1,6 +1,6 @@
 <html>
 <head>
- 	<title>Welcome to GoodGroceries - Online Shopping Website for the Freshest and Best Quality Groceries You Need Everyday</title>
+ 	<title>MERCERIA</title>
 	<style>
         	body {
                 	background-color: powderblue;
@@ -58,10 +58,10 @@
 </head>
 <body>
 	<div class="header">
-  		<h1>Welcome to GoodGroceries</h1>
+  		<h1>HOME</h1>
 	</div>
 <form action="homepage.php" method="post">
-	
+<!--Search button-->
 	<br><br>
 	<input type="text" size="50" name="valueToSearch" placeholder="Search products here by name">
 	<input type="submit" id="SearchProductName" name="search" value="Search">

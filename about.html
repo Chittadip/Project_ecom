@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+.column {
+  float: left;
+  width: 33.3%;
+  margin-bottom: 16px;
+  padding: 0 8px;
+}
+
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  margin: 8px;
+}
+
+.about-section {
+  padding: 50px;
+  text-align: center;
+  background-color: #474e5d;
+  color: white;
+}
+
+.container {
+  padding: 0 16px;
+}
+
+.container::after, .row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.title {
+  color: grey;
+}
+
+.button {
+  border: none;
+  outline: 0;
+  display: inline-block;
+  padding: 8px;
+  color: white;
+  background-color: #000;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+}
+
+
+.button:hover {
+  background-color: #555;
+}
+
+@media screen and (max-width: 650px) {
+  .column {
+    width: 100%;
+    display: block;
+  }
+}
+</style>
+</head>
+<body>
+<div class="about-section">
+  <h1>About Us Page</h1>
+  <p style="font-size: 18px;
+            font-family: Georgia;
+            margin-bottom: 30px;
+            padding: 5px 0;
+            color: #fff;
+            text-transform: uppercase;
+            text-align: center;">E-commerce has become popular across the world today.
+Previously, one would have to hop from one shop to another to purchase the required grocery items. But, not anymore.
+On MERCEARIA, you can search for and buy the grocery items you need and have them delivered to your doorstep.
+MERCEARIA provides service 24/7, so you can shop late at night, or early in the morning, according to your convenience.
+What are the grocery items available on MERCEARIA?
+From pulses, spices, vegetables, fruits, to dairy, breakfast essentials, health drinks,
+MERCEARIA brings fresh and best quality everyday essential grocery to you for the best prices</p>
+</div>
+<div><a href="index1.html" class="btn" style="font-size: 20px;
+      text-decoration: none;
+      color: #fff;
+      padding: 10px 10px;
+      border: 2px solid #fff;
+      transition: 0.6s ease;
+      position: absolute;
+      background: transparent;      
+      top:2%;
+      left: 93%;
+      float: right;">BACK</a></div>
+
+<h2 style="text-align:center">Our Team</h2>
+<div class="row">
+  <div class="column">
+    <div class="card">
+      <img src="c1.jpg" alt="Chitta" style="width:300px; height: 400px;">
+      <div class="container">
+        <h2>Chittadip Bag</h2>
+        <p class="title">Admin and Developer</p>
+        <p>Some text that describes me lorem ipsum ipsum lorem.</p>
+        <p>jane@example.com</p>
+        <p><button class="button">Contact</button></p>
+      </div>
+    </div>
+  </div>
+
+  <div class="column">
+    <div class="card">
+      <img src="g1.png" alt="Indrani" style="width:370px; height: 400px;">
+      <div class="container">
+        <h2>Indrani Dutta Gupta</h2>
+        <p class="title">Admin and Developer</p>
+        <p>Some text that describes me lorem ipsum ipsum lorem.</p>
+        <p>mike@example.com</p>
+        <p><button class="button">Contact</button></p>
+      </div>
+    </div>
+  </div>
+  
+  <div class="column">
+    <div class="card">
+      <img src="g3.jpg" alt="Maitrayee" style="width:350px; height: 400px;">
+      <div class="container">
+        <h2>Maitrayee Majumdar</h2>
+        <p class="title">Admin and Developer</p>
+        <p>Some text that describes me lorem ipsum ipsum lorem.</p>
+        <p>john@example.com</p>
+        <p><button class="button">Contact</button></p>
+      </div>
+    </div>
+  </div>
+
+  <div class="column">
+    <div class="card">
+      <img src="g2.jpg" alt="Shreyasi" style="width:350px; height: 400px;">
+      <div class="container">
+        <h2>Shreyasi Batabyal</h2>
+        <p class="title">Admin and Developer</p>
+        <p>Some text that describes me lorem ipsum ipsum lorem.</p>
+        <p>mike@example.com</p>
+        <p><button class="button">Contact</button></p>
+      </div>
+    </div>
+  </div>
+
+  <div class="column">
+    <div class="card">
+      <img src="c2.jpg" alt="Sarafad" style="width:300px; height: 400px;">
+      <div class="container">
+        <h2>Sk Sarafad</h2>
+        <p class="title">Admin and Developer</p>
+        <p>Some text that describes me lorem ipsum ipsum lorem.</p>
+        <p>mike@example.com</p>
+        <p><button class="button">Contact</button></p>
+      </div>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>

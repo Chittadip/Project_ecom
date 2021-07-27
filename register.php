@@ -9,7 +9,8 @@
                 opacity: 1.0;
         }
          .box{
-            width: 400px;
+            width: 500px;
+            height: 700px;
             padding: 50px;
             border-radius: 30px;
             position: absolute;
@@ -142,6 +143,10 @@
          text-decoration: none;
           color: #6c5ce7;
         }
+        a.btn:hover{
+    background-color: #fff;
+    color: #000;
+}
     </style>
 
         <title>Customer registration page</title>
@@ -152,14 +157,24 @@
     <!--<div class="main">-->
        <div class="register">
         <h1>Registration</h1>
-        <input type="text" name="name" id="name" placeholder="enter your name" required>
-        <input type="email" name="email" id="email" placeholder="enter your email" required>
-        <input type="tel" name="phnno" id="phnno" placeholder="enter your phone number" required>
-        <input type="password" name="password" id="password" placeholder="enter your password" required>
+        <input type="text" name="name" id="name" placeholder="Name" required>
+        <input type="email" name="email" id="email" placeholder="Email ID" required>
+        <input type="tel" name="phnno" id="phnno" placeholder="Phone No." required>
+        <input type="password" name="password" id="password" placeholder="Password" required>
         <input type="submit" value="Register"></h2></center>
     <!--</div>-->
     </div>
     	<p class="login-register-text">Have an account?<a href="login.php">Login Here</a></p>
+        <a href="index2.html" class="btn" style="font-size: 24px;
+            text-decoration: none;
+            padding: 10px 20px;
+            border: 5px solid #fff;
+            transition: 0.6s ease;
+            position: absolute;
+            top:90%;
+            left: 75%;
+            float: right;
+">BACK</a>
         </form>
     </body>
 </html>
